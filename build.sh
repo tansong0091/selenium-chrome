@@ -19,8 +19,8 @@ fi
 docker build \
     --build-arg app_version=${application_version} \
     --file ${dockerfile_path} \
-    --build-arg HTTP_PROXY="http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80" \
-    --build-arg HTTPS_PROXY="http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80" \
+    --build-arg HTTP_PROXY="http://YOUR_PROXY" \
+    --build-arg HTTPS_PROXY="http://YOUR_PROXY" \
     --tag ${application_name}:${application_version} \
     --tag ${AWSACCOUNT}/${application_name}:${application_version} \
     --tag ${application_name}:latest \
