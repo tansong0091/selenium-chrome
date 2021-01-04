@@ -1,0 +1,8 @@
+#https://github.com/SeleniumHQ/selenium
+#https://github.com/SeleniumHQ/docker-selenium
+
+install python3-pip in original images and add python package selenium. Now you can run selenium test by python3 inside its container. also add ssh-server for access
+
+docker stop selenium-standalone-chrome
+docker rm selenium-standalone-chrome
+docker run -d --name selenium-standalone-chrome -p 4444:4444 -e http_proxy="" -e https_proxy="" -p 5900:5900 --shm-size 2g  tansong0091/selenium-chrome-ssh:1
